@@ -121,7 +121,7 @@ namespace ProjBancoMorangao
                             }
                             if (resp == 's')
                             {
-                                clientescad.Permissao = true;
+                                //clientescad.Permissao = true;
                                 Console.WriteLine("Conta aprovada com sucesso!");
                                 //clientes.Remove(clientescad);
                                 clientescad.ContaAprovada();
@@ -367,6 +367,7 @@ namespace ProjBancoMorangao
             {
 
                 case 1:
+                 
                     #region
                     int matricula = 0;
                     Gerente novogerente;
@@ -374,6 +375,7 @@ namespace ProjBancoMorangao
                     string nome = "";
                     int numeroagencia;
                     char ehgerente;
+                   
                     Console.Clear();
                     Console.WriteLine("CADASTRO DE FUNCIONARIO");
                     Console.WriteLine("Informe o nome :");
@@ -382,6 +384,7 @@ namespace ProjBancoMorangao
                     matricula = int.Parse(Console.ReadLine());
                     Console.WriteLine("Ele é um gerente?");
                     ehgerente = char.Parse(Console.ReadLine());
+                  
                     Console.WriteLine("A qual agencia ele pertence?");
                     foreach (Agencia i in listaagencias)
                     {

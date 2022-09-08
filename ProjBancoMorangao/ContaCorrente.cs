@@ -9,12 +9,12 @@ namespace ProjBancoMorangao
     internal class ContaCorrente
     {
         public int Id { get; set; }
-       
+
         public Agencia Agencia { get; set; }
-       
+
         public double Saldo { get; set; }
         //public double ChequeEspecial { get; set; }
-       
+
 
         public ContaCorrente()
         {
@@ -51,15 +51,20 @@ namespace ProjBancoMorangao
             Console.WriteLine("Informe o valor desejado para saque");
             double valorsaque = double.Parse(Console.ReadLine());
 
-            Saldo = Saldo - valorsaque;
-            if(valorsaque>Saldo)
+
+            if (valorsaque > Saldo)
             {
                 Console.WriteLine("O saldo atual é insuficiente para realizar o saque!");
-                Console.WriteLine("Saldo: "+Saldo);
+                Console.WriteLine("Saldo: " + Saldo);
 
 
             }
-            
+            else
+            {
+                Saldo = Saldo - valorsaque;
+                Console.WriteLine("Saldo: " + Saldo);
+            }
+
 
         }
 
@@ -73,6 +78,6 @@ namespace ProjBancoMorangao
 
         }
 
-       
+
     }
 }
